@@ -7,7 +7,7 @@
 
             // add a new method
             method: function(sig, fn) {
-                sig = sig || [];
+                sig || (sig = []);
                 map[sig.join('::').toLowerCase()] = {
                     fn: fn,
                     inject: fn.length > sig.length
