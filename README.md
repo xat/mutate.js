@@ -12,14 +12,14 @@ var sum = mutate(function() {
     }, 0);
 })
 .method(['array'], function(done, arr) {
-    return done.apply(done, arr);
+    return done.apply(null, arr);
 })
 .method(['object'], function(done, obj) {
     var arr = [];
     for (var key in obj) {
         arr.push(obj[key]);
     }
-    return done.apply(done, arr);
+    return done.apply(null, arr);
 })
 .close();
 
